@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U2S-Zg-9WR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,18 +11,22 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
             <string>Avenir-Heavy</string>
         </array>
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Bold</string>
             <string>AvenirNext-Medium</string>
         </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
     </customFonts>
     <scenes>
         <!--HOME-->
         <scene sceneID="lbs-G6-pPD">
             <objects>
-                <viewController id="z3j-Uo-XKv" customClass="MainVC" customModule="ARCHON_Support_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z3j-Uo-XKv" customClass="MainVC" customModule="ARCHON_Prototype1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQi-gA-giT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +113,7 @@
         <!--JOB OPENINGS-->
         <scene sceneID="pc2-vr-UaU">
             <objects>
-                <viewController id="abw-VH-ycW" customClass="JobLevelTVC" customModule="ARCHON_Support_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="abw-VH-ycW" customClass="JobLevelTVC" customModule="ARCHON_Prototype1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ca3-I2-Vzh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +123,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="136" id="25E-wy-fz8" customClass="CategoryCell" customModule="ARCHON_Support_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="136" id="25E-wy-fz8" customClass="CategoryCell" customModule="ARCHON_Prototype1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="25E-wy-fz8" id="Vzy-tw-Iwe">
@@ -178,11 +182,87 @@
                     <navigationItem key="navigationItem" title="JOB OPENINGS" id="Ecu-om-tEF"/>
                     <connections>
                         <outlet property="jobCategory" destination="ihf-gW-sFj" id="d6c-x3-i29"/>
+                        <segue destination="AeJ-OU-Zap" kind="show" id="qIz-EI-A9x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHr-7u-bQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2112.8000000000002" y="-337.78110944527737"/>
+            <point key="canvasLocation" x="2142" y="-337"/>
+        </scene>
+        <!--ProductCVC-->
+        <scene sceneID="2r6-iq-obR">
+            <objects>
+                <viewController id="AeJ-OU-Zap" customClass="ProductCVC" customModule="ARCHON_Prototype1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Icv-9g-Ggl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECT JOB OPPORTUNITY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zr-ml-TJR">
+                                <rect key="frame" x="16" y="78" width="236" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-hE-B1v">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52132930359999996" green="0.73244900170000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gMW-0B-rfk">
+                                    <size key="itemSize" width="176" height="235"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="ODU-7n-2J8" customClass="ProductCell" customModule="ARCHON_Prototype1">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="235"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="235"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cSharp" translatesAutoresizingMaskIntoConstraints="NO" id="RMB-aX-4qO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="148"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=".NET Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXd-hw-rTe">
+                                                    <rect key="frame" x="23.5" y="156" width="129.5" height="26"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-aq-itP">
+                                                    <rect key="frame" x="39" y="185" width="98" height="30"/>
+                                                    <color key="backgroundColor" red="0.97938120370000004" green="0.77668330900000004" blue="0.30429875950000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <state key="normal" title="APPLY NOW">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="RMB-aX-4qO" secondAttribute="trailing" id="8Xl-tb-WOC"/>
+                                            <constraint firstItem="gXd-hw-rTe" firstAttribute="centerX" secondItem="ODU-7n-2J8" secondAttribute="centerX" id="KOD-d7-7gf"/>
+                                            <constraint firstItem="RMB-aX-4qO" firstAttribute="top" secondItem="ODU-7n-2J8" secondAttribute="top" id="PQ3-Ps-cD6"/>
+                                            <constraint firstItem="XoX-aq-itP" firstAttribute="centerX" secondItem="ODU-7n-2J8" secondAttribute="centerX" id="YNd-AV-feb"/>
+                                            <constraint firstItem="RMB-aX-4qO" firstAttribute="leading" secondItem="ODU-7n-2J8" secondAttribute="leading" id="g6m-Xt-e5u"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52132930359999996" green="0.73244900170000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="tGa-7V-YTp"/>
+                    </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="qMT-hE-B1v" id="BTH-sJ-E4X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ns8-mB-RdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2896.8000000000002" y="-339.58020989505252"/>
         </scene>
         <!--Home-->
         <scene sceneID="WBF-ov-hPD">
@@ -206,6 +286,7 @@
     </scenes>
     <resources>
         <image name="ArchonLOGO" width="213" height="56"/>
+        <image name="cSharp" width="45" height="42"/>
         <image name="freshGrad" width="253" height="111"/>
     </resources>
 </document>
