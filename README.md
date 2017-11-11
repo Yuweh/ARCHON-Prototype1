@@ -1,10 +1,4 @@
-# ARCHON-Support-App
+# ARCHON--PROTOApp
 
 Prototype App for Archon Consulting
-
-Features
-Social Media Link / Viewer (Finished: 11/06 Monday)
-News and Updates
-Chat
-Job List
-Autolayout ()
+Will try to implement JSON Data to Job Openins in Tables XD
