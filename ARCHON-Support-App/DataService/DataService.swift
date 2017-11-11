@@ -20,9 +20,22 @@ class DataService {
         Category(title: "Non-IT Positions", imageName: "nonITPost.png"),
         ]
     
+    private let openings = [
+        Product(title: ".NET Developer", imageName: "cSharp.png"),
+        Product(title: "JAVA Developer", imageName: "java.png"),
+        Product(title: "Android Developer", imageName: "android.png"),
+        Product(title: "iOS App Developer", imageName: "apple.png"),
+        Product(title: "Angular Developer", imageName: "angular.png"),
+        Product(title: "PHP Developer", imageName: "php.png"),
+        ]
+    
     //MARK: Related Functions
     func getCategories() -> [Category] {
         return categories
+    }
+    
+    func getProducts() -> [Product] {
+        return openings
     }
     
 }
